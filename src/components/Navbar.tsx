@@ -42,6 +42,14 @@ const Navbar = () => {
               About
             </Link>
             <Link
+              to="/services"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/services") ? "text-primary" : "text-foreground"
+              }`}
+            >
+              Services
+            </Link>
+            <Link
               to="/contact"
               className={`text-sm font-medium transition-colors hover:text-primary ${
                 isActive("/contact") ? "text-primary" : "text-foreground"
