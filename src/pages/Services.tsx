@@ -3,6 +3,11 @@ import Footer from "@/components/Footer";
 import { Snowflake, Clock, Shield, Thermometer, Building2, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import freezerRoomImg from "@/assets/freezer-room.jpg";
+import chillerRoomImg from "@/assets/chiller-room.jpg";
+import petShelterImg from "@/assets/pet-shelter.jpg";
+import portableColdRoomImg from "@/assets/portable-cold-room.jpg";
+import budgetColdRoomImg from "@/assets/budget-cold-room.jpg";
 
 const Services = () => {
   const services = [
@@ -10,35 +15,35 @@ const Services = () => {
       icon: Snowflake,
       title: "Freezer Room Manufacturing",
       description: "Industrial-grade freezer rooms built to your exact specifications with advanced insulation and energy-efficient cooling systems.",
-      image: "/src/assets/freezer-room.jpg",
+      image: freezerRoomImg,
       link: "/services/freezer-room"
     },
     {
       icon: Thermometer,
       title: "Chiller Room",
       description: "Professional chiller rooms with precise temperature control for optimal food storage and display in commercial settings.",
-      image: "/src/assets/chiller-room.jpg",
+      image: chillerRoomImg,
       link: "/services/chiller-room"
     },
     {
       icon: Building2,
       title: "Pet Shelter Container Cold Room",
       description: "Specialized climate-controlled containers for veterinary clinics and animal care facilities with humidity control.",
-      image: "/src/assets/pet-shelter.jpg",
+      image: petShelterImg,
       link: "/services/pet-shelter"
     },
     {
       icon: Shield,
       title: "Portable Cold Room",
       description: "Mobile refrigeration solutions that can be relocated as needed. Perfect for events, construction sites, and temporary storage.",
-      image: "/src/assets/portable-cold-room.jpg",
+      image: portableColdRoomImg,
       link: "/services/portable-cold-room"
     },
     {
       icon: Clock,
       title: "Budget Cold Room",
       description: "Cost-effective cold storage solutions for small businesses and startups without compromising on quality or reliability.",
-      image: "/src/assets/budget-cold-room.jpg",
+      image: budgetColdRoomImg,
       link: "/services/budget-cold-room"
     }
   ];
