@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
+import ReviewSection from "@/components/ReviewSection";
 import heroImage from "@/assets/hero-refrigeration.jpg";
 
 const Index = () => {
@@ -77,13 +78,13 @@ const Index = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "400ms" }}>
               <a href="tel:+971524745126">
-                <Button size="lg" className="gap-2 text-lg px-8">
+                <Button size="lg" className="gap-2 text-lg px-8 hover:scale-105 transition-transform duration-200">
                   <Phone className="h-5 w-5" />
                   Call Us Now
                 </Button>
               </a>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="gap-2 text-lg px-8">
+                <Button size="lg" variant="outline" className="gap-2 text-lg px-8 hover:scale-105 transition-transform duration-200">
                   <Mail className="h-5 w-5" />
                   Get a Quote
                 </Button>
@@ -102,11 +103,15 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-muted/50">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-muted/50 relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-10 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Our Services</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "100ms" }}>
               Comprehensive refrigeration solutions for all your commercial and industrial needs
             </p>
           </div>
@@ -128,38 +133,38 @@ const Index = () => {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose Us</h2>
-            <p className="text-xl text-muted-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Why Choose Us</h2>
+            <p className="text-xl text-muted-foreground animate-fade-in" style={{ animationDelay: "100ms" }}>
               Your trusted partner for refrigeration solutions in Dubai
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-lg bg-card border-2 border-border hover:border-primary transition-colors">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <Clock className="h-8 w-8 text-primary" />
+            <div className="group text-center p-8 rounded-lg bg-card border-2 border-border hover:border-primary hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-2 animate-fade-in cursor-pointer">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 group-hover:bg-primary/20 group-hover:scale-110 mb-4 transition-all duration-300">
+                <Clock className="h-8 w-8 text-primary group-hover:animate-pulse" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">24/7 Availability</h3>
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">24/7 Availability</h3>
               <p className="text-muted-foreground">
                 Round-the-clock service to ensure your operations never stop
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-lg bg-card border-2 border-border hover:border-primary transition-colors">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <Award className="h-8 w-8 text-primary" />
+            <div className="group text-center p-8 rounded-lg bg-card border-2 border-border hover:border-primary hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-2 animate-fade-in cursor-pointer" style={{ animationDelay: "100ms" }}>
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 group-hover:bg-primary/20 group-hover:scale-110 mb-4 transition-all duration-300">
+                <Award className="h-8 w-8 text-primary group-hover:animate-pulse" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Expert Team</h3>
               <p className="text-muted-foreground">
                 Certified professionals with years of industry experience
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-lg bg-card border-2 border-border hover:border-primary transition-colors">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <Shield className="h-8 w-8 text-primary" />
+            <div className="group text-center p-8 rounded-lg bg-card border-2 border-border hover:border-primary hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-2 animate-fade-in cursor-pointer" style={{ animationDelay: "200ms" }}>
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 group-hover:bg-primary/20 group-hover:scale-110 mb-4 transition-all duration-300">
+                <Shield className="h-8 w-8 text-primary group-hover:animate-pulse" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Quality Guaranteed</h3>
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Quality Guaranteed</h3>
               <p className="text-muted-foreground">
                 Premium service and genuine parts for lasting performance
               </p>
@@ -167,6 +172,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Reviews Section */}
+      <ReviewSection />
 
       {/* CTA Section */}
       <section className="py-24 bg-primary text-primary-foreground">
