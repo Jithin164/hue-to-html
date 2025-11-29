@@ -44,7 +44,7 @@ const Index = () => {
       <WhatsAppFloat />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-24 md:pt-32">
         {/* Blue gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary/90"></div>
         
