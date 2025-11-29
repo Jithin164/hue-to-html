@@ -63,7 +63,7 @@ const Index = () => {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 Best Cold Room
                 <span className="block mt-2">Manufacturer</span>
-                <span className="block mt-2">in Saudi Arabia</span>
+                <span className="block mt-2">in UAE</span>
               </h1>
               
               <p className="text-xl md:text-2xl font-medium">
