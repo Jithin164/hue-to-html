@@ -6,6 +6,13 @@ import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewSection from "@/components/ReviewSection";
 import heroImage from "@/assets/hero-refrigeration.jpg";
+import freezerRoomImg from "@/assets/freezer-room.jpg";
+import chillerRoomImg from "@/assets/chiller-room.jpg";
+import petShelterImg from "@/assets/pet-shelter.jpg";
+import portableColdRoomImg from "@/assets/portable-cold-room.jpg";
+import budgetColdRoomImg from "@/assets/budget-cold-room.jpg";
+import { Card } from "@/components/ui/card";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   const services = [
@@ -34,71 +41,116 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      <WhatsAppFloat />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Blue gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary/90"></div>
         
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden opacity-10">
+          <Snowflake className="absolute top-20 left-10 text-white animate-float" size={60} />
+          <Snowflake className="absolute top-40 right-20 text-white animate-float" size={40} style={{ animationDelay: '1s' }} />
+          <Snowflake className="absolute bottom-40 left-1/4 text-white animate-float" size={50} style={{ animationDelay: '2s' }} />
+          <Snowflake className="absolute bottom-20 right-1/3 text-white animate-float" size={35} style={{ animationDelay: '0.5s' }} />
+        </div>
+
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="mb-6 flex justify-center gap-3">
-              <Snowflake className="h-16 w-16 text-primary animate-float" />
-              <Snowflake className="h-16 w-16 text-primary/60 animate-float" style={{ animationDelay: "0.3s" }} />
-              <Snowflake className="h-16 w-16 text-primary/30 animate-float" style={{ animationDelay: "0.6s" }} />
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in">
-              Asal Alwadi
-            </h1>
-            <p className="text-2xl md:text-3xl text-primary font-semibold mb-2 animate-fade-in" style={{ animationDelay: "100ms" }}>
-              اصل الوادي
-            </p>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in" style={{ animationDelay: "200ms" }}>
-              Refrigeration Installation & Maintenance
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: "300ms" }}>
-              <div className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full">
-                <Clock className="h-5 w-5" />
-                <span className="font-semibold">24hr Everyday Service</span>
-              </div>
-              <div className="flex items-center gap-2 bg-card border-2 border-primary px-6 py-3 rounded-full">
-                <Award className="h-5 w-5 text-primary" />
-                <span className="font-semibold">Professional Team</span>
-              </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: Text Content */}
+            <div className="space-y-8 animate-fade-in text-white">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                Best Cold Room
+                <span className="block mt-2">Manufacturer</span>
+                <span className="block mt-2">in Saudi Arabia</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl font-medium">
+                We Make Cold Room Easy &
+                <span className="block">Affordable</span>
+              </p>
+              
+              <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-white text-primary hover:bg-white/90">
+                <Link to="/contact" className="flex items-center gap-2">
+                  GET STARTED
+                </Link>
+              </Button>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "400ms" }}>
-              <a href="tel:+971524745126">
-                <Button size="lg" className="gap-2 text-lg px-8 hover:scale-105 transition-transform duration-200">
-                  <Phone className="h-5 w-5" />
-                  Call Us Now
-                </Button>
-              </a>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="gap-2 text-lg px-8 hover:scale-105 transition-transform duration-200">
-                  <Mail className="h-5 w-5" />
-                  Get a Quote
-                </Button>
-              </Link>
+            {/* Right: Product Images Collage */}
+            <div className="relative h-[500px] md:h-[600px] animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="grid grid-cols-2 gap-4 h-full">
+                <div className="space-y-4">
+                  <img 
+                    src={freezerRoomImg} 
+                    alt="Freezer Room" 
+                    className="w-full h-48 object-cover rounded-lg shadow-2xl"
+                  />
+                  <img 
+                    src={chillerRoomImg} 
+                    alt="Chiller Room" 
+                    className="w-full h-64 object-cover rounded-lg shadow-2xl"
+                  />
+                </div>
+                <div className="space-y-4 pt-12">
+                  <img 
+                    src={portableColdRoomImg} 
+                    alt="Portable Cold Room" 
+                    className="w-full h-64 object-cover rounded-lg shadow-2xl"
+                  />
+                  <img 
+                    src={budgetColdRoomImg} 
+                    alt="Budget Cold Room" 
+                    className="w-full h-48 object-cover rounded-lg shadow-2xl"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Decorative snowflakes */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <Snowflake className="absolute top-20 left-10 h-8 w-8 text-primary/20 animate-float" />
-          <Snowflake className="absolute top-40 right-20 h-12 w-12 text-primary/10 animate-float" style={{ animationDelay: "1s" }} />
-          <Snowflake className="absolute bottom-40 left-1/4 h-10 w-10 text-primary/15 animate-float" style={{ animationDelay: "2s" }} />
-          <Snowflake className="absolute bottom-60 right-1/3 h-6 w-6 text-primary/20 animate-float" style={{ animationDelay: "1.5s" }} />
+      {/* Feature Cards Section */}
+      <section className="relative -mt-20 z-20 mb-20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="p-8 text-center bg-card hover:shadow-xl transition-all duration-300 border-t-4 border-primary">
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Snowflake className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Cold Room Service</h3>
+              <p className="text-muted-foreground">
+                The quality of work is always at the highest level. We are ready to perform a large amount of work in quality.
+              </p>
+            </Card>
+
+            <Card className="p-8 text-center bg-card hover:shadow-xl transition-all duration-300 border-t-4 border-primary">
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Award className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Affordable Price</h3>
+              <p className="text-muted-foreground">
+                We hope that our Cold rooms are a humble effort by us to serve all with the latest technology.
+              </p>
+            </Card>
+
+            <Card className="p-8 text-center bg-card hover:shadow-xl transition-all duration-300 border-t-4 border-primary">
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Clock className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-3">24/7 Support</h3>
+              <p className="text-muted-foreground">
+                We see opportunities coming again. We provide service within the agreed timelines of the agreement.
+              </p>
+            </Card>
+          </div>
         </div>
       </section>
 
