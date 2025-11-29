@@ -10,7 +10,7 @@ const WhatsAppFloat = () => {
         asChild
       >
         <a
-          href="https://wa.me/966530783379"
+          href="https://wa.me/971524745126"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Contact us on WhatsApp"
@@ -25,7 +25,7 @@ const WhatsAppFloat = () => {
         asChild
       >
         <a
-          href="tel:+966530783379"
+          href="tel:+971524745126"
           aria-label="Call us"
         >
           <Phone className="h-6 w-6 text-white" />
